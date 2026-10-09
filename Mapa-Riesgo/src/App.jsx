@@ -1,14 +1,18 @@
-import './App.css'
-import PaginaMapa from './Pages/PaginaMapa'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import PaginaMapa from "./Pages/PaginaMapa";
+import Home from "./Pages/Home";
 
 function App() {
- 
-
   return (
-    <>
-<PaginaMapa></PaginaMapa>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mapa" element={<PaginaMapa />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
