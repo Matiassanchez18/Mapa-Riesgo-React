@@ -1,3 +1,21 @@
-#map{
-    height: 350px;
+#map {
+  height: 350px;
+}
+
+.contendor-mapa{
+    position: relative;
+}
+
+.botonReporte{
+    position: absolute;
+   bottom:450px;
+  left: 250px;
+  z-index: 1000;
+}
+
+.botonFlecha{
+   position: absolute;
+   top:297px;
+  left: 320px;
+  z-index: 1000;
 }

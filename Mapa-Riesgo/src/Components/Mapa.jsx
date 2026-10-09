@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "../Style/Mapa.css";
+import ReporteMapa from "./ReporteMapa";
 
 function Mapa() {
   return (
@@ -22,7 +23,7 @@ function Mapa() {
           </button>
         </div>
 
-        <div className="container container mx-auto px-4">
+        <div className="container container mx-auto px-4 contendor-mapa">
           <MapContainer
             center={[-26.8241, -65.2226]}
             zoom={13}
@@ -35,6 +36,28 @@ function Mapa() {
             />
           </MapContainer>
         </div>
+
+        <div>
+          <button
+            type="button"
+            className="botonReporte bottom-24  flex items-center rounded-full bg-[#032f5c] px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-[#064078] active:scale-95"
+          >
+            <i className="bi bi-plus-lg text-lg"></i>
+            Reportar
+          </button>
+
+          <button
+            type="button"
+            aria-label="Agrandar mapa"
+            className="botonFlecha right-4 top-4  flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-[#032f5c] text-lg text-white shadow-lg transition hover:bg-[#064078] active:scale-95"
+          >
+            <i className="bi bi-arrows-angle-expand"></i>
+          </button>
+        </div>
+      </container>
+
+      <container>
+        <ReporteMapa></ReporteMapa>
       </container>
     </div>
   );
