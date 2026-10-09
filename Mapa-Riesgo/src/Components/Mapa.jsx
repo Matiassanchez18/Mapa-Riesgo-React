@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "../Style/Mapa.css";
 import ReporteMapa from "./ReporteMapa";
 import Formulario from "./Formulario";
+import Footer from "./Footer";
 
 function Mapa() {
   const [modal, setModal] = useState(false);
@@ -76,6 +77,10 @@ function Mapa() {
 
       <div className="container mx-auto px-4 mt-4 position-[absolute]">
         <ReporteMapa />
+      </div>
+
+      <div>
+        <Footer></Footer>
       </div>
     </div>
   );
