@@ -16,8 +16,7 @@ function Mapa() {
 
           <button
             type="button"
-            aria-label="Buscar"
-            className="rounded-r-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+            className="rounded-r-lg border border-gray-500 bg-transparent px-4 py-2 text-gray-300 transition hover:bg-gray-700 hover:text-white"
           >
             <i className="bi bi-search"></i>
           </button>
