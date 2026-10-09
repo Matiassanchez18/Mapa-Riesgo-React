@@ -11,7 +11,7 @@ function Mapa() {
             type="text"
             placeholder="Buscar zona o dirección"
             aria-label="Buscar zona o dirección"
-            className="flex-1 min-w-0 rounded-l-lg border border-gray-600 bg-[#1b263b] px-4 py-2 text-white placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+            className="flex-1 min-w-0 rounded-l-lg border border-gray-600 bg-white text-dark px-4 py-2 placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
           />
 
           <button
