@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "../Style/Mapa.css";
 import ReporteMapa from "./ReporteMapa";
 
 function Mapa() {
+  const [modal, setModal] = useState(false);
+
+  const modalHandle = () => {
+    setModal(!modal);
+  };
+
   return (
     <div>
       <div>
@@ -41,6 +48,7 @@ function Mapa() {
 
             <button
               type="button"
+              onClick={modalHandle}
               className="botonReporte flex items-center gap-2 rounded-full bg-[#032f5c] px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-[#064078] active:scale-95"
             >
               <i className="bi bi-plus-lg text-lg"></i>
@@ -61,6 +69,130 @@ function Mapa() {
       <div className="container mx-auto px-4 mt-4">
         <ReporteMapa />
       </div>
+
+      {modal ? (
+        <div className="bg-white mx-5 border rounded-lg border border-gray-700">
+          <div className="border-b p-4 border-gray-700">
+            <p>hola</p>
+          </div>
+          <div>
+           
+ <form className="form-reporte" onSubmit={(e) => e.preventDefault()}>
+      <div className="reporte-card">
+      <div className="reporte-header">
+        <div className="reporte-icono">
+          <i className="bi bi-exclamation-triangle"></i>
+        </div>
+
+        <div>
+          <h2>Nuevo reporte</h2>
+          <p>Ayudá a la comunidad compartiendo lo ocurrido.</p>
+        </div>
+      </div>
+
+      <form
+        className="reporte-form"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <div className="reporte-campo">
+          <label htmlFor="hecho">Localidad del hecho</label>
+          <div className="reporte-input-icono">
+            <i className="bi bi-geo-alt"></i>
+            <input
+              type="text"
+              id="hecho"
+              placeholder="Ej. San Lorenzo 2100"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="reporte-campo">
+          <label htmlFor="tipo">Tipo de robo</label>
+          <div className="reporte-input-icono">
+            <i className="bi bi-shield-exclamation"></i>
+            <select id="tipo" defaultValue="" required>
+              <option value="" disabled>
+                Seleccioná el tipo de incidente
+              </option>
+              <option value="Arrebato">Arrebato</option>
+              <option value="Robo de celular">Robo de celular</option>
+              <option value="Robo de vehículo">Robo de vehículo</option>
+              <option value="Robo en vivienda">Robo en vivienda</option>
+              <option value="Intento de robo">Intento de robo</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="reporte-campo">
+          <label>¿Hubo testigos?</label>
+
+          <div className="reporte-opciones">
+            <label className="reporte-opcion">
+              <input
+                type="radio"
+                name="testigos"
+                value="si"
+                required
+              />
+              <span>
+                <i className="bi bi-check-circle"></i>
+                Sí
+              </span>
+            </label>
+
+            <label className="reporte-opcion">
+              <input
+                type="radio"
+                name="testigos"
+                value="no"
+              />
+              <span>
+                <i className="bi bi-x-circle"></i>
+                No
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div className="reporte-campo">
+          <label htmlFor="descripcion">Descripción del hecho</label>
+          <textarea
+            id="descripcion"
+            rows={4}
+            placeholder="Contá brevemente qué pasó, dónde y cuándo..."
+          />
+          <small>
+            Cuanto más clara sea la descripción, más útil será para otros usuarios.
+          </small>
+        </div>
+
+        <div className="reporte-acciones">
+          <button
+            type="reset"
+            className="reporte-btn-cancelar"
+          >
+            Limpiar
+          </button>
+
+          <button
+            type="submit"
+            className="reporte-btn-enviar"
+          >
+            <i className="bi bi-send"></i>
+            Enviar reporte
+          </button>
+        </div>
+      </form>
+    </div>
+    </form>
+
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
