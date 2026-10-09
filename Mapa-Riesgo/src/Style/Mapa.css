@@ -1,21 +1,71 @@
+
 #map {
+  width: 100%;
   height: 350px;
 }
 
-.contendor-mapa{
+.mapa-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.contendor-mapa {
+  position: relative;
+  width: 100%;
+}
+
+.botonReporte {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  left: auto;
+  z-index: 1000;
+}
+
+.btn-zoom {
+  position: absolute;
+  top: 245px;
+  right: 25px;
+  left: auto;
+  z-index: 1000;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  #map {
+    height: 550px;
+  
+  }
+
+  .botonReporte {
     position: relative;
+    bottom: 60px;
+    left: 700px;
+  }
+
+  .btn-zoom {
+    position: relative;
+    top: -160px;
+    left: 775px;
+  }
 }
 
-.botonReporte{
-    position: absolute;
-   bottom:450px;
-  left: 250px;
-  z-index: 1000;
-}
+/* Escritorio */
+@media (min-width: 992px) {
+  #map {
+    height: 550px;
+    width: 100%;
+  }
 
-.botonFlecha{
-   position: absolute;
-   top:297px;
-  left: 320px;
-  z-index: 1000;
+  .botonReporte {
+    position: relative;
+    top: 40px;
+  }
+
+  .btn-zoom {
+    /* Hereda los estilos de tablet */
+  }
 }
