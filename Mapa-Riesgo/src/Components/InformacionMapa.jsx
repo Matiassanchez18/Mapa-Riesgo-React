@@ -5,7 +5,7 @@ function InformacionMapa({ titulo, descripcion }) {
         <header className="informacion-mapa-encabezado">{titulo}</header>
 
         <div className="informacion-mapa-contenido">
-          <p className="informacion-mapa_-texto">{descripcion}</p>
+          <p className="informacion-mapa-texto">{descripcion}</p>
 
           <a href="#" className="informacion-mapa-boton">
             Conocé más →
