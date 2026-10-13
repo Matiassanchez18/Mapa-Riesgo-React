@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
 import "../Style/Home.css";
+
 
 function AccionesRapidas() {
   return (
     <section className="acciones-rapidas">
-      <a href="#" className="accion-rapida">
+      <Link  to="#" className="accion-rapida">
         <i className="bi bi-exclamation-triangle accion-rapida-icono accion-rapida-icono--alerta"></i>
         <span className="accion-rapida-texto">Reportar hecho</span>
-      </a>
+      </Link>
 
-      <a href="/Mapa" className="accion-rapida">
+      <Link to="/Mapa" className="accion-rapida">
         <i className="bi bi-map accion-rapida-icono accion-rapida-icono--mapa"></i>
         <span className="accion-rapida-texto">Ver Mapa</span>
-      </a>
+      </Link>
     </section>
   );
 }
