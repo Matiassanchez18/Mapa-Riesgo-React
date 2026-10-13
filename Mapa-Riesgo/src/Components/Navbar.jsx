@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [abierto, setAbierto] = useState(false);
   return (
     <nav className="bg-[#1B2B3A] p-4 text-white md:flex md:items-center md:justify-around">
       <div className="flex w-full items-center justify-between md:w-auto">
-        <a href="/" className="whitespace-nowrap text-xl font-bold">
+        <Link to="/" className="whitespace-nowrap text-xl font-bold">
           <i className="bi bi-geo-alt-fill"></i> MAPA DE RIESGO
-        </a>
+        </Link>
 
-        {/* boton hamburguesa*/}
         <button
           type="button"
           onClick={() => setAbierto(!abierto)}
@@ -25,13 +25,13 @@ function Navbar() {
         className={`${abierto ? "flex" : "hidden"} mt-4 flex-col gap-4 md:mt-0 md:flex md:flex-row`}
       >
         <li>
-          <a href="/">Inicio</a>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <a href="/Mapa">Mapa</a>
+          <Link to="/Mapa">Mapa</Link>
         </li>
         <li>
-          <a href="/denuncia">Agregar denuncia</a>
+          <Link to="/denuncia">Agregar denuncia</Link>
         </li>
       </ul>
     </nav>
