@@ -353,6 +353,11 @@
 .reporte-card {
   position: relative;
 }
+.card-reporte {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
 
 .reporte-cerrar {
   position: absolute;
@@ -385,15 +390,18 @@
   }
 
   .botonReporte {
-    position: relative;
-    bottom: 60px;
-    left: 700px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    left: auto;
   }
 
   .btn-zoom {
-    position: relative;
-    top: -160px;
-    left: 775px;
+    position: absolute;
+    top: 430px;
+    right: 15px;
+    left: auto;
+    bottom: auto;
   }
 }
 
@@ -404,11 +412,17 @@
   }
 
   .botonReporte {
-    position: relative;
-    top: 40px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    left: auto;
   }
 
   .btn-zoom {
-    /* Hereda los estilos de tablet */
+    position: absolute;
+    top: 433px;
+    right: 25px;
+    left: auto;
+    bottom: auto;
   }
 }
