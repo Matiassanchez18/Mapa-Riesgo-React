@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import PaginaMapa from "./Pages/PaginaMapa";
 import Home from "./Pages/Home";
+import Reporte from "./Components/Reporte";
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mapa" element={<PaginaMapa />} />
+                <Route path="/reporte" element={<Reporte />} />
+
       </Routes>
     </BrowserRouter>
   );
