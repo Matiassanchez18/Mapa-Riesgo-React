@@ -1,3 +1,5 @@
+import "../Style/Home.css";
+
 function InformacionMapa({ titulo, descripcion }) {
   return (
     <div>
@@ -8,7 +10,7 @@ function InformacionMapa({ titulo, descripcion }) {
           <p className="informacion-mapa-texto">{descripcion}</p>
 
           <a href="#" className="informacion-mapa-boton">
-            Conocé más →
+            Conocé más +
           </a>
         </div>
       </article>

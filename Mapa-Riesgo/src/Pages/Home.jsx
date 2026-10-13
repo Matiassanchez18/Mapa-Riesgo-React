@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <main className="mx-auto mt-6 w-[90%] max-w-6xl space-y-6">
+      <main className="mx-auto mt-6 w-full max-w-6xl space-y-6 px-4">
         <UltimoIncidente incidente={incidenteReciente}></UltimoIncidente>
         <AccionesRapidas />
         <InformacionMapa
