@@ -1,6 +1,8 @@
+import "../Style/Mapa.css"
+
 function ReporteMapa() {
   return (
-    <div>
+    <div className="card-reporte">
       <div className="mb-4 flex w-full max-w-xl mx-auto p-2 mt-2">
         <div className="rounded-xl border border-gray-700 bg-[#1b263b] p-4 shadow-md">
           <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold text-red-500">

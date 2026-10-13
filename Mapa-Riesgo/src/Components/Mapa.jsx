@@ -12,7 +12,7 @@ function Mapa() {
 
   const darValor = (dato) => {
     setValor(dato);
-    setModal(dato)
+    setModal(dato);
   };
 
   const modalHandle = () => {
@@ -75,7 +75,7 @@ function Mapa() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 mt-4 position-[absolute]">
+      <div className="container card-reporte mx-auto px-4 mt-4">
         <ReporteMapa />
       </div>
 
