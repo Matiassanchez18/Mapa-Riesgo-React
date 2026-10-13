@@ -1,3 +1,4 @@
+import AccionesRapidas from "../Components/AccionesRapidas";
 import Navbar from "../Components/Navbar";
 import UltimoIncidente from "../Components/UltimoIncidente";
 
@@ -15,6 +16,7 @@ function Home() {
       <Navbar />
       <main className="mx-auto mt-6 w-[90%] max-w-6xl space-y-6">
         <UltimoIncidente incidente={incidenteReciente}></UltimoIncidente>
+        <AccionesRapidas />
         
       </main>
 
